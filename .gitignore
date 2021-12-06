@@ -3,8 +3,8 @@ node_modules
 /dist
 /temp
 
-web-side/node_modules
-web-side/dist
+web/node_modules
+web/dist
 
 # local env files
 .env.local
