@@ -43,8 +43,6 @@ app.get('/temp.html', function (req, res) {
 /* Start App */
 app.start();
 console.log('ports:', sys.appinfo().ports)
-console.log('ports:', sys.appinfo().appid)
-console.log('ports:', sys.appinfo().port)
 
 const socketio = io(app, {
   serveClient: false,
@@ -57,7 +55,6 @@ socketio.on('connection', socket => {
 
   // Subscribe
   sigslot.slot('progress', (msg) => {
-    // console.log('>> main download arrived:', msg.data);
     socket.emit('progress', msg)
   });
 

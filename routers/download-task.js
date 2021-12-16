@@ -44,11 +44,4 @@ sigslot.slot('download', (msg) => {
   })
 });
 
-// while (true) {
-//   // Publish
-//   console.log('>>>> ioshed:', iosched.forever)
-//   iosched.forever()
-//   // require('iosched').forever();
-// }
-
 require('iosched').forever();
