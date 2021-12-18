@@ -24,7 +24,6 @@ export default defineComponent({
         })
         if (data.data === 100) {
           console.log('>>>> download over <<<<')
-          // downloadList.value = downloadList.value.filter(list => list.progress < 100)
         }
       })
     })
@@ -64,7 +63,6 @@ export default defineComponent({
     function _renderAdd () {
       return (
         <div>
-          {/* <input vModel={ resource.value } placeholder="资源地址"></input><button onClick={ handleDownload }>下载</button> */}
           <InputSearch
             vModel={ [resource.value, 'value'] }
             placeholder="资源地址"
@@ -73,7 +71,6 @@ export default defineComponent({
             allowClear
             onSearch={ handleDownload }
             size="large">
-
           </InputSearch>
         </div>
       )

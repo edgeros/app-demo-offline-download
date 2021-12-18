@@ -1,7 +1,8 @@
 import io from 'socket.io-client'
 class SocketIO {
   constructor () {
-    this.socket = io('https://192.168.128.1:7376')
+    // this.socket = io('https://192.168.128.1:7376')
+    this.socket = io('/')
     this.socket.on('connect', () => {
       console.log('>> 已连接！')
     })
@@ -9,7 +10,7 @@ class SocketIO {
 
   push (event, msg) {
     this.socket.emit(event, msg, (response) => {
-      console.log('>>>> res:', response)
+      console.log('res:', response)
     })
   }
 }
